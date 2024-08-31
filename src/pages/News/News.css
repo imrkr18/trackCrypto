@@ -1,0 +1,67 @@
+/* src/NewsList.css */
+.news-list {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.news-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+    min-height: 100px; /* Adjust the minimum height based on your needs */
+    position: relative;
+}
+
+.news-card:hover {
+    background-color: #e9ecef;
+    transform: translateY(-3px);
+}
+
+.news-info {
+    flex-grow: 1;
+    margin-right: 15px;
+    padding-right: 90px; /* Add padding to ensure space for the button */
+}
+
+.news-timestamp {
+    font-size: 0.9em;
+    color: #6c757d;
+    margin-bottom: 5px;
+}
+
+.news-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 10px; 
+}
+
+.news-link {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    white-space: nowrap; 
+    margin-left: 25px;
+}
+
+.news-link:hover {
+    background-color: #0056b3;
+}

@@ -16,3 +16,25 @@ a{
   color: white;
   background: linear-gradient(#070036,#392a5f,#003342);
 }
+
+.spinner {
+  display: grid;
+  place-self: center;
+  min-height: 80vh;
+}
+
+.spin{
+  width: 64px;
+  height: 64px;
+  place-self: center;
+  border: 5px solid #bdbdbd;
+  border-top-color: #4500c6;
+  border-radius: 50%;
+  animation: rotate 2s infinite;
+}
+
+@keyframes rotate{
+  100%{
+      transform: rotate(360deg);
+  }
+}

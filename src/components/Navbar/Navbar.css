@@ -51,7 +51,10 @@
     background: white;
     border: none;
     cursor: pointer;
+}
 
+.nav-right button{
+    cursor: not-allowed;
 }
 
 @media (max-width: 900px) {

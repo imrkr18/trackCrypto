@@ -1,0 +1,59 @@
+.about-box{
+    padding: 0 20px;
+}
+.about-container {
+    max-width: 54vw;
+    margin: 50px auto;
+    padding: 20px;
+}
+.about-container h1{
+    border-bottom: 2px solid #4CAF50;
+    margin-bottom: 10px ;
+}
+
+h1, h2 {
+    color: #f7f3f3;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.intro {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.section p {
+    line-height: 1.6;
+    color: #cecccc;
+    font-size: 1.2rem;
+}
+
+.section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 1.2rem;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+}
+
+.section ul li strong {
+    color: #4CAF50;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 15px;
+    }
+}

@@ -11,25 +11,25 @@ const CoinContextProvider = (props) =>{
             symbol : "$"
         }
     );
-    
-    const fetchAllCoins = async() => {
+    const [currentPage, setCurrentPage] = useState(1);
+    const fetchAllCoins = async(page) => {
         const options = {
             method: 'GET',
             headers: {accept: 'application/json', 'x-cg-demo-api-key': 'CG-8vCSQyqEeVzj9YRaibuHuH54'}
           };
           
-          fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.name}&per_page=250`, options)
+          fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.name}&per_page=15&page=${page}`, options)
             .then(response => response.json())
             .then(response => setAllCoins(response))
             .catch(err => console.error(err));
     }
 
     useEffect(()=>{
-        fetchAllCoins();
-    },[currency])
+        fetchAllCoins(currentPage);
+    },[currency,currentPage])
 
     const contextValue = {
-        allCoins, currency, setCurrency
+        allCoins, currency, setCurrency, fetchAllCoins,currentPage, setCurrentPage
     };
     return(
         <CoinContext.Provider value={contextValue}>
